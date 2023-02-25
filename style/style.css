@@ -1,0 +1,200 @@
+/* css reset from joshwcomeau.com */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --clr-bg-100: #fff;
+    --clr-bg-900: #000;
+    --clr-neutral-100: #fff;
+    --clr-neutral-900: #000;
+    --clr-primary-1: #E38826;
+    --clr-primary-2: #006970;
+    --clr-primary-3: #004241;
+    --clr-neutral-1: rgba(255, 255, 255, .75);
+    --clr-neutral-2: #f2f2f2;
+    --font-normal: 400;
+    --font-bold: 700;
+}
+
+body {
+    background: var(--clr-neutral-2);
+    display: grid;
+    place-content: center;
+    padding: 6rem 1.5rem;
+}
+
+main {
+    max-width: calc(375px - 3rem);
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.cntr {
+    padding: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    height: 445px;
+}
+
+.cntr1 {
+    background: var(--clr-primary-1);
+    border-radius: .5rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.cntr2 {
+    background: var(--clr-primary-2);
+}
+
+.cntr3 {
+    background: var(--clr-primary-3);
+    border-radius: .5rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+img.car-icon {
+    width: 64px;
+    height: 40px;
+}
+
+h1.heading {
+    font-size: 2.5rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: var(--font-bold);
+    color: var(--clr-neutral-2);
+    line-height: 2;
+}
+
+p.para {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: var(--font-normal);
+    font-weight: 300;
+    color: var(--clr-neutral-1);
+    letter-spacing: 0;
+    line-height: 1.6;
+}
+
+button.btn {
+    justify-self: flex-end !important;
+    border: 2px solid var(--clr-neutral-2);
+    border-radius: 32px;
+    width: 144px;
+    margin: 1rem 0 1.5rem 0;
+    padding: 10px;
+    font-size: .9375rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: var(--font-normal);
+    cursor: pointer;
+    transition: .4s ease-out;
+}
+
+.btn1 {
+    color: var(--clr-primary-1);
+}
+
+.btn2 {
+    color: var(--clr-primary-2);
+}
+
+.btn3 {
+    color: var(--clr-primary-3);
+}
+
+.btn1:hover {
+    background: var(--clr-primary-1);
+    color: var(--clr-neutral-2);
+}
+
+.btn2:hover {
+    background: var(--clr-primary-2);
+    color: var(--clr-neutral-2);
+}
+
+.btn3:hover {
+    background: var(--clr-primary-3);
+    color: var(--clr-neutral-2);
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        max-width: calc(916px);
+    }
+    .container {
+        flex-flow: row nowrap;
+    }
+    .cntr {
+        height: 505px;
+    }
+    .cntr1 {
+        background: var(--clr-primary-1);
+        border-radius: .5rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .cntr3 {
+        background: var(--clr-primary-3);
+        border-radius: .5rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    button.btn {
+        justify-self: flex-end !important;
+        margin-block-start: 4rem;
+    }
+}
